@@ -41,7 +41,7 @@ export default class ContentEditable extends React.Component {
       // Perhaps React (whose VDOM gets outdated because we often prevent
       // rerendering) did not update the DOM. So we update it manually now.
       this.htmlEl.innerHTML = this.props.html;
-      if (this.props.html == '') {
+      if (this.htmlEl.text == '') {
         this.htmlEl.empty();
       }
     }
